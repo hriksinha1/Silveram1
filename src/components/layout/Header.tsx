@@ -95,7 +95,7 @@ export function Header() {
               onClick={() => handleLanguageChange("en")}
               className={`px-2.5 py-1 rounded-full transition-all cursor-pointer ${
                 locale === "en"
-                  ? "bg-midnight text-porcelain shadow-sm font-semibold"
+                  ? "bg-midnight text-porcelain font-semibold"
                   : "text-graphite hover:text-midnight"
               }`}
               title="English"
@@ -107,7 +107,7 @@ export function Header() {
               onClick={() => handleLanguageChange("hi")}
               className={`px-2.5 py-1 rounded-full transition-all cursor-pointer ${
                 locale === "hi"
-                  ? "bg-midnight text-porcelain shadow-sm font-semibold"
+                  ? "bg-midnight text-porcelain font-semibold"
                   : "text-graphite hover:text-midnight"
               }`}
               title="हिंदी (Hindi)"
@@ -123,7 +123,7 @@ export function Header() {
             className={`p-2 rounded-full border transition-all cursor-pointer flex items-center justify-center ${
               isMuted
                 ? "bg-stone-100 text-graphite-muted border-silver/40 hover:text-midnight"
-                : "bg-midnight/5 text-midnight border-silver/50 hover:bg-midnight/10 shadow-sm"
+                : "bg-midnight/5 text-midnight border-silver/50 hover:bg-midnight/10"
             }`}
             title={isMuted ? "Enable subtle haptic audio" : "Mute subtle haptic audio"}
             aria-label={isMuted ? t.soundMuted : t.soundOn}
@@ -139,7 +139,7 @@ export function Header() {
           <button
             type="button"
             onClick={openCart}
-            className="flex items-center gap-2 px-3.5 sm:px-4 py-2 rounded-full bg-midnight text-porcelain text-[11px] font-sans font-medium tracking-widest uppercase hover:bg-midnight-light transition-all shadow-sm cursor-pointer"
+            className="flex items-center gap-2 px-3.5 sm:px-4 py-2 rounded-buttons bg-evoo-yellow-green text-olive-ink border border-olive-ink text-[11px] font-sans font-medium tracking-widest uppercase hover:bg-evoo-yellow-green/70 transition-all cursor-pointer"
           >
             <ShoppingBag className="w-3.5 h-3.5 text-silver" />
             <span>{t.bag} ({cartCount})</span>

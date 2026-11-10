@@ -65,34 +65,32 @@ export function HeroSection({ product, onAddToCart }: HeroSectionProps) {
     <section
       id="hero"
       ref={containerRef}
-      className="relative w-full bg-midnight text-porcelain overflow-hidden py-16 sm:py-24 lg:py-28 border-b border-silver/15"
+      className="relative w-full bg-mustard-sun text-olive-ink overflow-hidden py-16 sm:py-24 lg:py-28 border-b border-silver/15"
     >
       {/* GEOMETRICAL ARCHITECTURAL DRAFTING GRID BACKDROP */}
       <div
         className="absolute inset-0 pointer-events-none opacity-40"
         style={{
           backgroundImage: `
-            linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
-            linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px)
+            linear-gradient(to right, rgba(60, 66, 46, 0.07) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(60, 66, 46, 0.07) 1px, transparent 1px)
           `,
           backgroundSize: "80px 80px",
         }}
       />
 
       {/* Ambient Lighting Orbs */}
-      <div className="absolute top-1/4 right-1/4 w-[480px] h-[480px] rounded-full bg-cobalt/20 blur-[140px] pointer-events-none" />
-      <div className="absolute bottom-10 left-10 w-[380px] h-[380px] rounded-full bg-silver/10 blur-[110px] pointer-events-none" />
 
       {/* Geometrical Architectural Corner Markers */}
-      <div className="hidden lg:flex justify-between items-center max-w-7xl mx-auto px-10 mb-8 text-[9px] font-mono tracking-widest text-silver/60 uppercase select-none border-b border-white/5 pb-3">
+      <div className="hidden lg:flex justify-between items-center max-w-7xl mx-auto px-10 mb-8 text-[9px] font-mono tracking-widest text-olive-ink/60 uppercase select-none border-b border-olive-ink/20 pb-3">
         <span className="flex items-center gap-1.5">
-          <span className="text-silver">+</span> 28°36'50" N • 77°12'32" E [NEW DELHI WORKSHOP]
+          <span className="text-olive-ink">+</span> 28°36'50" N • 77°12'32" E [NEW DELHI WORKSHOP]
         </span>
         <span className="flex items-center gap-1.5">
-          <Compass className="w-3 h-3 text-silver/60" /> SACRED GOLDEN RATIO Φ = 1.618
+          <Compass className="w-3 h-3 text-olive-ink/60" /> SACRED GOLDEN RATIO Φ = 1.618
         </span>
         <span className="flex items-center gap-1.5">
-          <span>DIM: 185 × 235 × 28 mm</span> <span className="text-silver">+</span>
+          <span>DIM: 185 × 235 × 28 mm</span> <span className="text-olive-ink">+</span>
         </span>
       </div>
 
@@ -101,7 +99,7 @@ export function HeroSection({ product, onAddToCart }: HeroSectionProps) {
           {/* LEFT: Restrained Minimal Editorial Narrative */}
           <div className="lg:col-span-5 flex flex-col space-y-6 pt-2">
             <div ref={badgeRef}>
-              <span className="inline-flex items-center gap-2 text-[10px] font-sans font-bold tracking-[0.25em] uppercase text-silver/90 px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 shadow-sm">
+              <span className="inline-flex items-center gap-2 text-[10px] font-sans font-bold tracking-[0.25em] uppercase text-olive-ink/90 px-3.5 py-1.5 rounded-full bg-olive-ink/5 border border-olive-ink/20">
                 <span className="w-1.5 h-1.5 rounded-full bg-cobalt animate-ping" />
                 {t.collectionBadge}
               </span>
@@ -109,18 +107,18 @@ export function HeroSection({ product, onAddToCart }: HeroSectionProps) {
 
             <h1
               ref={titleRef}
-              className="font-serif text-4xl sm:text-5xl lg:text-6xl tracking-tight text-porcelain leading-[1.08] font-normal whitespace-pre-line"
+              className="font-serif text-4xl sm:text-5xl lg:text-6xl tracking-tight text-olive-ink leading-[1.08] font-normal whitespace-pre-line"
             >
               {t.heroTitle}
             </h1>
 
             <div className="space-y-2">
-              <span className="text-xs font-mono tracking-widest uppercase text-silver/90 font-medium block">
+              <span className="text-xs font-mono tracking-widest uppercase text-olive-ink/90 font-medium block">
                 {t.heroHindiSubtitle}
               </span>
               <p
                 ref={subtitleRef}
-                className="text-silver/80 text-base sm:text-lg max-w-md font-light leading-relaxed font-sans"
+                className="text-olive-ink/80 text-base sm:text-lg max-w-md font-light leading-relaxed font-sans"
               >
                 {t.heroDesc}
               </p>
@@ -129,52 +127,52 @@ export function HeroSection({ product, onAddToCart }: HeroSectionProps) {
             {/* Geometrical Architectural Dimension Matrix */}
             <div
               ref={specsRef}
-              className="grid grid-cols-2 gap-3 pt-2 text-xs font-sans text-silver/80"
+              className="grid grid-cols-2 gap-3 pt-2 text-xs font-sans text-olive-ink/80"
             >
-              <div className="p-3 rounded-[6px] bg-white/5 border border-white/10">
-                <span className="text-[9px] font-mono uppercase tracking-widest text-silver/60 block mb-1">
+              <div className="p-3 rounded-[6px] bg-olive-ink/5 border border-olive-ink/20">
+                <span className="text-[9px] font-mono uppercase tracking-widest text-olive-ink/60 block mb-1">
                   01 // ALLOY CLAD
                 </span>
-                <span className="font-medium text-porcelain block">
+                <span className="font-medium text-olive-ink block">
                   {locale === "hi" ? "999 शुद्ध सिल्वर क्लैड" : "999 Fine Silver Clad"}
                 </span>
-                <span className="text-[10px] text-silver/60">
+                <span className="text-[10px] text-olive-ink/60">
                   {locale === "hi" ? "इलेक्ट्रोफॉर्म्ड देव नक्काशी" : "Laser electroformed relief"}
                 </span>
               </div>
 
-              <div className="p-3 rounded-[6px] bg-white/5 border border-white/10">
-                <span className="text-[9px] font-mono uppercase tracking-widest text-silver/60 block mb-1">
+              <div className="p-3 rounded-[6px] bg-olive-ink/5 border border-olive-ink/20">
+                <span className="text-[9px] font-mono uppercase tracking-widest text-olive-ink/60 block mb-1">
                   02 // CASING
                 </span>
-                <span className="font-medium text-porcelain block">
+                <span className="font-medium text-olive-ink block">
                   {locale === "hi" ? "ऑप्टिकल ऐक्रेलिक" : "Monolithic Acrylic"}
                 </span>
-                <span className="text-[10px] text-silver/60">
+                <span className="text-[10px] text-olive-ink/60">
                   {locale === "hi" ? "इनबिल्ट टेबलटॉप स्टैंड" : "Built-in angled easel stand"}
                 </span>
               </div>
 
-              <div className="p-3 rounded-[6px] bg-white/5 border border-white/10">
-                <span className="text-[9px] font-mono uppercase tracking-widest text-silver/60 block mb-1">
+              <div className="p-3 rounded-[6px] bg-olive-ink/5 border border-olive-ink/20">
+                <span className="text-[9px] font-mono uppercase tracking-widest text-olive-ink/60 block mb-1">
                   03 // PROTECTION
                 </span>
-                <span className="font-medium text-porcelain block">
+                <span className="font-medium text-olive-ink block">
                   {locale === "hi" ? "नैनो-सिरेमिक शील्ड" : "Nano-Ceramic Sealed"}
                 </span>
-                <span className="text-[10px] text-silver/60">
+                <span className="text-[10px] text-olive-ink/60">
                   {locale === "hi" ? "आजीवन एंटी-टार्निश सुरक्षा" : "Permanent anti-tarnish barrier"}
                 </span>
               </div>
 
-              <div className="p-3 rounded-[6px] bg-white/5 border border-white/10">
-                <span className="text-[9px] font-mono uppercase tracking-widest text-silver/60 block mb-1">
+              <div className="p-3 rounded-[6px] bg-olive-ink/5 border border-olive-ink/20">
+                <span className="text-[9px] font-mono uppercase tracking-widest text-olive-ink/60 block mb-1">
                   04 // DEDICATION
                 </span>
-                <span className="font-medium text-porcelain block">
+                <span className="font-medium text-olive-ink block">
                   {locale === "hi" ? "निशुल्क उत्कीर्णन" : "Bespoke Inscription"}
                 </span>
-                <span className="text-[10px] text-silver/60">
+                <span className="text-[10px] text-olive-ink/60">
                   {locale === "hi" ? "सिल्वर फिनिश पट्टिका" : "Free engraved rear plaque"}
                 </span>
               </div>
@@ -185,7 +183,7 @@ export function HeroSection({ product, onAddToCart }: HeroSectionProps) {
               <button
                 type="button"
                 onClick={handleOrderClick}
-                className="group inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-porcelain text-midnight text-xs font-sans font-semibold tracking-widest uppercase hover:bg-silver transition-all duration-300 shadow-xl active:scale-95 cursor-pointer"
+                className="group inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-porcelain text-midnight text-xs font-sans font-semibold tracking-widest uppercase hover:bg-silver transition-all duration-300 active:scale-95 cursor-pointer"
               >
                 <span>{t.addToBagBtn} — {priceDisplay}</span>
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -193,7 +191,7 @@ export function HeroSection({ product, onAddToCart }: HeroSectionProps) {
 
               <a
                 href="#moments"
-                className="px-5 py-4 text-center text-xs font-sans font-medium tracking-widest uppercase text-silver/80 hover:text-porcelain transition-colors flex items-center justify-center gap-2"
+                className="px-5 py-4 text-center text-xs font-sans font-medium tracking-widest uppercase text-olive-ink/80 hover:text-olive-ink transition-colors flex items-center justify-center gap-2"
               >
                 <span>{locale === "hi" ? "शुभ स्थान देखें" : "View Sanctuaries"}</span>
               </a>
@@ -215,7 +213,7 @@ export function HeroSection({ product, onAddToCart }: HeroSectionProps) {
             )}
 
             {/* Honest Trust Guarantee */}
-            <div className="pt-3 border-t border-white/10 flex items-center gap-3 text-xs font-sans text-silver/70">
+            <div className="pt-3 border-t border-olive-ink/20 flex items-center gap-3 text-xs font-sans text-olive-ink/70">
               <ShieldCheck className="w-4 h-4 text-cobalt shrink-0" />
               <span>{t.guaranteeText}</span>
             </div>

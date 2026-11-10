@@ -15,7 +15,7 @@ export function NotFound() {
       </p>
       <a
         href="/"
-        className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-midnight text-porcelain text-xs font-sans font-semibold tracking-wider uppercase hover:bg-midnight-light transition-all shadow-md"
+        className="inline-flex items-center gap-2 px-6 py-3 rounded-buttons bg-evoo-yellow-green text-olive-ink border border-olive-ink text-xs font-sans font-semibold tracking-wider uppercase hover:bg-evoo-yellow-green/70 transition-all"
       >
         <ArrowLeft className="w-3.5 h-3.5" />
         <span>Return to Atelier</span>

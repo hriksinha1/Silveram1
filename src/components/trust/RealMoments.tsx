@@ -94,31 +94,30 @@ export function RealMoments() {
   return (
     <section
       id="moments"
-      className="w-full bg-[#0a111e] text-porcelain py-24 sm:py-32 px-6 sm:px-10 border-b border-silver/20 relative overflow-hidden"
+      className="w-full bg-squeeze-bottle-green text-olive-ink py-24 sm:py-32 px-6 sm:px-10 border-b border-silver/20 relative overflow-hidden"
     >
       {/* Subtle Background Radial Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-cobalt/10 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
         <div className="max-w-3xl mb-14 sm:mb-20">
           <div className="flex items-center gap-3 mb-3">
-            <span className="text-[10px] font-mono uppercase tracking-[0.25em] text-silver/70 font-semibold">
+            <span className="text-[10px] font-mono uppercase tracking-[0.25em] text-olive-ink/70 font-semibold">
               {t.momentsBadge}
             </span>
             <div className="h-[1px] w-12 bg-silver/30" />
           </div>
 
-          <h2 className="font-serif text-3xl sm:text-5xl text-porcelain font-normal leading-tight">
+          <h2 className="font-serif text-3xl sm:text-5xl text-olive-ink font-normal leading-tight">
             {t.momentsTitle}
           </h2>
-          <p className="text-sm font-sans text-silver/70 mt-3.5 font-light leading-relaxed max-w-2xl">
+          <p className="text-sm font-sans text-olive-ink/70 mt-3.5 font-light leading-relaxed max-w-2xl">
             {t.momentsDesc}
           </p>
         </div>
 
         {/* Sanctuary Location Selector Tabs */}
-        <div className="flex flex-wrap items-center gap-2.5 sm:gap-4 mb-10 pb-4 border-b border-white/10">
+        <div className="flex flex-wrap items-center gap-2.5 sm:gap-4 mb-10 pb-4 border-b border-olive-ink/20">
           {SANCTUARIES.map((sanctuary, idx) => {
             const isSelected = activeTab === idx;
             return (
@@ -128,13 +127,13 @@ export function RealMoments() {
                 onClick={() => handleSelect(idx)}
                 className={`px-4 sm:px-5 py-2.5 rounded-full text-xs font-sans font-medium tracking-wider transition-all cursor-pointer flex items-center gap-2.5 ${
                   isSelected
-                    ? "bg-porcelain text-midnight shadow-lg scale-102"
-                    : "bg-white/5 hover:bg-white/10 text-silver/80 border border-white/10"
+                    ? "bg-porcelain text-midnight scale-102"
+                    : "bg-olive-ink/5 hover:bg-olive-ink/10 text-olive-ink/80 border border-olive-ink/20"
                 }`}
               >
-                <MapPin className={`w-3.5 h-3.5 ${isSelected ? "text-cobalt" : "text-silver/60"}`} />
+                <MapPin className={`w-3.5 h-3.5 ${isSelected ? "text-cobalt" : "text-olive-ink/60"}`} />
                 <span>{locale === "hi" ? sanctuary.titleHi : sanctuary.titleEn}</span>
-                <span className={`text-[10px] font-mono px-1.5 py-0.5 rounded-full ${isSelected ? "bg-midnight/10 text-midnight" : "bg-white/10 text-silver/60"}`}>
+                <span className={`text-[10px] font-mono px-1.5 py-0.5 rounded-full ${isSelected ? "bg-olive-ink/10 text-olive-ink" : "bg-olive-ink/10 text-olive-ink/60"}`}>
                   {sanctuary.city}
                 </span>
               </button>
@@ -146,7 +145,7 @@ export function RealMoments() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
           {/* Left Column: High-Fidelity Editorial Lifestyle Photograph */}
           <div className="lg:col-span-7">
-            <div className="relative aspect-[4/3] rounded-[16px] overflow-hidden border border-white/15 bg-black/40 shadow-[0_30px_90px_-20px_rgba(0,0,0,0.85)] group">
+            <div className="relative aspect-[4/3] rounded-[16px] overflow-hidden border border-olive-ink/30 bg-olive-ink/10 group">
               <img
                 src={current.image}
                 alt={locale === "hi" ? current.titleHi : current.titleEn}
@@ -159,18 +158,18 @@ export function RealMoments() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20 pointer-events-none" />
 
               {/* Top Floating Geolocation Coordinates Badge */}
-              <div className="absolute top-4 left-4 flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-white/15 text-[10px] font-mono text-silver tracking-wider">
-                <Compass className="w-3 h-3 text-silver/80 animate-spin-slow" />
+              <div className="absolute top-4 left-4 flex items-center gap-2 px-3 py-1.5 rounded-full bg-linen-cream/90 backdrop-blur-md border border-olive-ink/30 text-[10px] font-mono text-olive-ink tracking-wider">
+                <Compass className="w-3 h-3 text-olive-ink/80 animate-spin-slow" />
                 <span>{current.coords}</span>
                 <span className="w-1 h-1 rounded-full bg-emerald-400" />
               </div>
 
               {/* Bottom Caption Pill */}
-              <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between text-xs font-sans text-porcelain">
-                <span className="px-3 py-1 rounded-[6px] bg-black/60 backdrop-blur-md border border-white/15 text-[11px] font-medium tracking-wide">
+              <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between text-xs font-sans text-olive-ink">
+                <span className="px-3 py-1 rounded-[6px] bg-linen-cream/90 backdrop-blur-md border border-olive-ink/30 text-[11px] font-medium tracking-wide">
                   {locale === "hi" ? current.occasionHi : current.occasionEn}
                 </span>
-                <span className="text-[10px] font-mono text-silver/70 hidden sm:inline-block">
+                <span className="text-[10px] font-mono text-olive-ink/70 hidden sm:inline-block">
                   CURATED SANCTUARY 0{activeTab + 1}
                 </span>
               </div>
@@ -180,22 +179,22 @@ export function RealMoments() {
           {/* Right Column: Editorial Narrative & Provenance */}
           <div className="lg:col-span-5 space-y-6">
             <div className="space-y-2">
-              <span className="text-[11px] font-mono uppercase tracking-[0.2em] text-silver/60 block">
+              <span className="text-[11px] font-mono uppercase tracking-[0.2em] text-olive-ink/60 block">
                 {current.city} • {locale === "hi" ? current.occasionHi : current.occasionEn}
               </span>
-              <h3 className="font-serif text-2xl sm:text-3xl text-porcelain font-normal leading-snug">
+              <h3 className="font-serif text-2xl sm:text-3xl text-olive-ink font-normal leading-snug">
                 {locale === "hi" ? current.titleHi : current.titleEn}
               </h3>
             </div>
 
             {/* Testimonial Quote Box */}
-            <div className="relative p-6 sm:p-7 rounded-[12px] bg-white/[0.04] border border-white/10 backdrop-blur-sm space-y-4">
-              <Quote className="w-6 h-6 text-silver/30" />
-              <p className="font-serif italic text-base sm:text-lg text-porcelain/95 font-light leading-relaxed">
+            <div className="relative p-6 sm:p-7 rounded-[12px] bg-white/[0.04] border border-olive-ink/20 backdrop-blur-sm space-y-4">
+              <Quote className="w-6 h-6 text-olive-ink/50" />
+              <p className="font-serif italic text-base sm:text-lg text-olive-ink font-light leading-relaxed">
                 &ldquo;{locale === "hi" ? current.quoteHi : current.quoteEn}&rdquo;
               </p>
-              <div className="pt-3 border-t border-white/10 flex items-center justify-between">
-                <span className="text-xs font-sans font-medium text-silver/90 tracking-wide">
+              <div className="pt-3 border-t border-olive-ink/20 flex items-center justify-between">
+                <span className="text-xs font-sans font-medium text-olive-ink/90 tracking-wide">
                   {locale === "hi" ? current.authorHi : current.authorEn}
                 </span>
                 <span title="Verified Silveram Keepsake Placement">
@@ -205,11 +204,11 @@ export function RealMoments() {
             </div>
 
             {/* Architectural Placement Specs */}
-            <div className="p-4 rounded-[8px] bg-black/30 border border-white/10 space-y-1.5">
-              <span className="text-[9px] font-mono uppercase tracking-[0.2em] text-silver/60 block">
+            <div className="p-4 rounded-[8px] bg-olive-ink/5 border border-olive-ink/20 space-y-1.5">
+              <span className="text-[9px] font-mono uppercase tracking-[0.2em] text-olive-ink/60 block">
                 {locale === "hi" ? "वास्तु एवं स्थान विवरण:" : "ARCHITECTURAL PLACEMENT SPECS:"}
               </span>
-              <p className="text-xs font-sans text-silver/80 font-light">
+              <p className="text-xs font-sans text-olive-ink/80 font-light">
                 {locale === "hi" ? current.specsHi : current.specsEn}
               </p>
             </div>
@@ -217,7 +216,7 @@ export function RealMoments() {
         </div>
 
         {/* Thumbnail Navigation Row */}
-        <div className="grid grid-cols-3 gap-4 mt-12 sm:mt-16 pt-8 border-t border-white/10">
+        <div className="grid grid-cols-3 gap-4 mt-12 sm:mt-16 pt-8 border-t border-olive-ink/20">
           {SANCTUARIES.map((sanctuary, idx) => (
             <button
               key={sanctuary.id}
@@ -225,11 +224,11 @@ export function RealMoments() {
               onClick={() => handleSelect(idx)}
               className={`group text-left p-2.5 sm:p-3 rounded-[10px] border transition-all cursor-pointer ${
                 activeTab === idx
-                  ? "bg-white/10 border-porcelain shadow-md"
-                  : "bg-white/[0.02] border-white/10 hover:border-white/20"
+                  ? "bg-olive-ink/10 border-porcelain"
+                  : "bg-white/[0.02] border-olive-ink/20 hover:border-olive-ink/40"
               }`}
             >
-              <div className="relative aspect-[16/9] rounded-[6px] overflow-hidden mb-2.5 bg-black/40">
+              <div className="relative aspect-[16/9] rounded-[6px] overflow-hidden mb-2.5 bg-olive-ink/10">
                 <img
                   src={sanctuary.image}
                   alt={sanctuary.city}
@@ -239,10 +238,10 @@ export function RealMoments() {
                 />
               </div>
               <div className="flex items-center justify-between">
-                <span className="text-[11px] font-sans font-medium text-porcelain group-hover:text-silver transition-colors truncate">
+                <span className="text-[11px] font-sans font-medium text-olive-ink group-hover:text-olive-ink transition-colors truncate">
                   {sanctuary.city}
                 </span>
-                <span className="text-[9px] font-mono text-silver/60">
+                <span className="text-[9px] font-mono text-olive-ink/60">
                   0{idx + 1}
                 </span>
               </div>

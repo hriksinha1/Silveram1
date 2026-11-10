@@ -32,7 +32,7 @@ export function HomePage() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* 1. Unified Fixed Header with Announcement Bar */}
-      <header className="fixed top-0 left-0 right-0 z-50 shadow-sm">
+      <header className="fixed top-0 left-0 right-0 z-50">
         <AnnouncementBar />
         <Header />
       </header>

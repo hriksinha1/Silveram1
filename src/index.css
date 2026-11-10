@@ -3,40 +3,47 @@
 @tailwind utilities;
 
 :root {
-  --font-editorial: "Playfair Display", Georgia, serif;
-  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  /* Brand Palette - Midnight Gallery + Gift Ritual */
-  --color-midnight: #0C1B36;
-  --color-midnight-dark: #060E1D;
-  --color-midnight-light: #14284D;
-  
-  --color-porcelain: #F7F5F0;
-  --color-porcelain-pure: #FFFFFF;
-  --color-porcelain-muted: #EFECE6;
-  
-  --color-silver: #D9DFE8;
-  --color-silver-light: #EEF2F6;
-  --color-silver-dark: #A6B1C2;
-  
-  --color-cobalt: #6178FF;
-  --color-cobalt-hover: #4D64F5;
-  
-  --color-graphite: #222B3A;
-  --color-graphite-muted: #4A5568;
+  /* GRAZA colors */
+  --color-olive-ink: #3c422e;
+  --color-linen-cream: #fff4ec;
+  --color-buttery-peach: #f6e6d9;
+  --color-squeeze-bottle-green: #9eef80;
+  --color-evoo-yellow-green: #d1e030;
+  --color-mustard-sun: #fbd535;
 
+  /* Fonts (Google Fonts substitutes for GT Alpina Typewriter / ITC Garamond Condensed / Apercu) */
+  --font-gt-alpina-typewriter: "IBM Plex Serif", "Lora", Georgia, serif;
+  --font-itc-garamond-condensed: "Cormorant Garamond", "Playfair Display", Georgia, serif;
+  --font-apercu: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  /* Radii */
+  --radius-buttons: 10px;
+  --radius-inputs: 10px;
+  --radius-images: 20px;
+  --radius-nav-capsule: 32px;
+  --radius-pills: 9999px;
+
+  /* Surfaces */
+  --surface-canvas: #fff4ec;
+  --surface-warm-card: #f6e6d9;
+  --surface-mustard-band: #fbd535;
+  --surface-green-band: #9eef80;
+  --surface-cta-surface: #d1e030;
 }
 
 @layer base {
   body {
-    background-color: #F7F5F0;
-    color: #222B3A;
-    font-family: var(--font-sans);
+    background-color: var(--surface-canvas);
+    color: var(--color-olive-ink);
+    font-family: var(--font-gt-alpina-typewriter);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
   h1, h2, h3, .font-serif {
-    font-family: var(--font-editorial);
+    font-family: var(--font-itc-garamond-condensed);
+    letter-spacing: -0.03em;
+    line-height: 0.95;
   }
 }
 
@@ -77,12 +84,12 @@
   }
 
   .bg-midnight-gallery {
-    background-color: #0C1B36;
-    color: #F7F5F0;
+    background-color: var(--color-mustard-sun);
+    color: var(--color-olive-ink);
   }
   
   .border-silver-subtle {
-    border-color: rgba(217, 223, 232, 0.4);
+    border-color: rgba(60, 66, 46, 0.4);
   }
 }
 
@@ -117,6 +124,6 @@ html {
 }
 
 :focus-visible {
-  outline: 2px solid #6178FF;
+  outline: 2px solid #3c422e;
   outline-offset: 2px;
 }

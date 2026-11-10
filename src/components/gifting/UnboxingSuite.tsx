@@ -11,14 +11,14 @@ export function UnboxingSuite() {
   const { playRustle } = useSound();
 
   return (
-    <section id="unboxing" className="w-full bg-midnight text-porcelain py-24 sm:py-32 px-6 sm:px-10 border-b border-silver/15 relative overflow-hidden">
+    <section id="unboxing" className="w-full bg-mustard-sun text-olive-ink py-24 sm:py-32 px-6 sm:px-10 border-b border-silver/15 relative overflow-hidden">
       {/* Background Hairline Grid */}
       <div
         className="absolute inset-0 pointer-events-none opacity-30"
         style={{
           backgroundImage: `
-            linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
-            linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px)
+            linear-gradient(to right, rgba(60, 66, 46, 0.07) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(60, 66, 46, 0.07) 1px, transparent 1px)
           `,
           backgroundSize: "60px 60px",
         }}
@@ -28,16 +28,16 @@ export function UnboxingSuite() {
         {/* Section Header */}
         <div className="max-w-2xl mb-16">
           <div className="flex items-center gap-3 mb-3">
-            <span className="text-[10px] font-mono uppercase tracking-[0.25em] text-silver/70 font-semibold">
+            <span className="text-[10px] font-mono uppercase tracking-[0.25em] text-olive-ink/70 font-semibold">
               {t.unboxingBadge}
             </span>
             <div className="h-[1px] w-12 bg-silver/30" />
           </div>
 
-          <h2 className="font-serif text-3xl sm:text-5xl text-porcelain font-normal leading-tight">
+          <h2 className="font-serif text-3xl sm:text-5xl text-olive-ink font-normal leading-tight">
             {t.unboxingTitle}
           </h2>
-          <p className="text-sm font-sans text-silver/70 mt-3 font-light leading-relaxed max-w-lg">
+          <p className="text-sm font-sans text-olive-ink/70 mt-3 font-light leading-relaxed max-w-lg">
             {t.unboxingDesc}
           </p>
         </div>
@@ -46,39 +46,39 @@ export function UnboxingSuite() {
           {/* Left Column: Interactive Box & Ribbon Showcase */}
           <div className="lg:col-span-6 flex flex-col items-center">
             {/* The Presentation Box Graphic */}
-            <div className="relative w-full max-w-md p-8 sm:p-10 rounded-[12px] bg-[#070d18] border border-white/20 shadow-[0_30px_70px_-15px_rgba(0,0,0,0.9)] text-center overflow-hidden">
+            <div className="relative w-full max-w-md p-8 sm:p-10 rounded-[12px] bg-buttery-peach border border-olive-ink/40 text-center overflow-hidden">
               {/* Dynamic Satin Ribbon Band across Box */}
               <div 
-                className="absolute inset-x-0 top-1/2 -translate-y-1/2 h-10 transition-colors duration-500 shadow-md"
+                className="absolute inset-x-0 top-1/2 -translate-y-1/2 h-10 transition-colors duration-500"
                 style={{ backgroundColor: activeRibbon.hex }}
               />
               <div 
-                className="absolute inset-y-0 left-1/2 -translate-x-1/2 w-10 transition-colors duration-500 shadow-md"
+                className="absolute inset-y-0 left-1/2 -translate-x-1/2 w-10 transition-colors duration-500"
                 style={{ backgroundColor: activeRibbon.hex }}
               />
 
               {/* Box Lid Center Medallion */}
-              <div className="relative z-10 w-24 h-24 rounded-full bg-[#0a1220] border-2 border-silver/50 mx-auto flex flex-col items-center justify-center shadow-2xl p-2">
-                <span className="font-serif text-xs font-normal text-silver uppercase tracking-widest block">
+              <div className="relative z-10 w-24 h-24 rounded-full bg-buttery-peach border-2 border-silver/50 mx-auto flex flex-col items-center justify-center p-2">
+                <span className="font-serif text-xs font-normal text-olive-ink uppercase tracking-widest block">
                   SILVERAM
                 </span>
-                <span className="text-[7px] font-mono text-silver/70 uppercase">
+                <span className="text-[7px] font-mono text-olive-ink/70 uppercase">
                   ATELIER
                 </span>
                 <div className="w-5 h-[1px] bg-silver/40 my-1" />
-                <span className="text-[6px] font-sans text-silver/60">
+                <span className="text-[6px] font-sans text-olive-ink/60">
                   NEW DELHI
                 </span>
               </div>
 
               {/* Box Meta */}
-              <div className="relative z-10 mt-8 pt-4 border-t border-white/10 flex items-center justify-between text-[10px] font-sans text-silver/80">
-                <span className="font-mono text-[9px] uppercase tracking-wider text-silver/60">
+              <div className="relative z-10 mt-8 pt-4 border-t border-olive-ink/20 flex items-center justify-between text-[10px] font-sans text-olive-ink/80">
+                <span className="font-mono text-[9px] uppercase tracking-wider text-olive-ink/60">
                   RIGID 1200 GSM CASE
                 </span>
                 <span className="flex items-center gap-1.5 font-medium">
                   <span 
-                    className="w-2.5 h-2.5 rounded-full border border-white/30" 
+                    className="w-2.5 h-2.5 rounded-full border border-olive-ink/60" 
                     style={{ backgroundColor: activeRibbon.hex }}
                   />
                   <span>{activeRibbon.name} Silk</span>
@@ -87,8 +87,8 @@ export function UnboxingSuite() {
             </div>
 
             {/* Ribbon Interactive Switcher Bar */}
-            <div className="w-full max-w-md mt-6 p-4 rounded-[8px] bg-white/5 border border-white/10 backdrop-blur-sm">
-              <span className="text-[10px] font-mono uppercase tracking-widest text-silver/60 block mb-2.5">
+            <div className="w-full max-w-md mt-6 p-4 rounded-[8px] bg-olive-ink/5 border border-olive-ink/20 backdrop-blur-sm">
+              <span className="text-[10px] font-mono uppercase tracking-widest text-olive-ink/60 block mb-2.5">
                 {t.ribbonSelectTitle}
               </span>
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
@@ -102,8 +102,8 @@ export function UnboxingSuite() {
                     }}
                     className={`p-2 rounded-[6px] border text-left flex items-center gap-2 transition-all cursor-pointer ${
                       activeRibbon.name === ribbon.name
-                        ? "bg-porcelain text-midnight border-porcelain shadow-md scale-105"
-                        : "bg-white/5 text-silver border-white/10 hover:bg-white/10"
+                        ? "bg-porcelain text-midnight border-porcelain scale-105"
+                        : "bg-olive-ink/5 text-olive-ink border-olive-ink/20 hover:bg-olive-ink/10"
                     }`}
                   >
                     <span 
@@ -121,9 +121,9 @@ export function UnboxingSuite() {
           <div className="lg:col-span-6 space-y-6">
             {/* The Certificate of Clad Authenticity Card */}
             <div 
-              className="p-6 sm:p-7 rounded-[10px] border border-slate-300 shadow-2xl relative text-slate-800"
+              className="p-6 sm:p-7 rounded-[10px] border border-slate-300 relative text-slate-800"
               style={{
-                background: "linear-gradient(135deg, #fdfbf7 0%, #f4f0e8 100%)",
+                background: "linear-gradient(135deg, #fff4ec 0%, #f6e6d9 100%)",
               }}
             >
               {/* Certificate Guilloche Inner Border */}
@@ -168,28 +168,28 @@ export function UnboxingSuite() {
 
             {/* 4 Inclusions Matrix */}
             <div className="grid grid-cols-2 gap-3 text-xs font-sans">
-              <div className="p-3.5 rounded-[8px] bg-white/5 border border-white/10">
+              <div className="p-3.5 rounded-[8px] bg-olive-ink/5 border border-olive-ink/20">
                 <span className="text-cobalt font-mono text-[9px] font-bold block mb-1">01 // BOX</span>
-                <span className="text-porcelain font-medium block">1200 GSM Rigid Box</span>
-                <span className="text-[10px] text-silver/60">Foil hot-stamped seal</span>
+                <span className="text-olive-ink font-medium block">1200 GSM Rigid Box</span>
+                <span className="text-[10px] text-olive-ink/60">Foil hot-stamped seal</span>
               </div>
 
-              <div className="p-3.5 rounded-[8px] bg-white/5 border border-white/10">
+              <div className="p-3.5 rounded-[8px] bg-olive-ink/5 border border-olive-ink/20">
                 <span className="text-cobalt font-mono text-[9px] font-bold block mb-1">02 // CRADLE</span>
-                <span className="text-porcelain font-medium block">Midnight Velvet Bed</span>
-                <span className="text-[10px] text-silver/60">Shock-resistant molded core</span>
+                <span className="text-olive-ink font-medium block">Midnight Velvet Bed</span>
+                <span className="text-[10px] text-olive-ink/60">Shock-resistant molded core</span>
               </div>
 
-              <div className="p-3.5 rounded-[8px] bg-white/5 border border-white/10">
+              <div className="p-3.5 rounded-[8px] bg-olive-ink/5 border border-olive-ink/20">
                 <span className="text-cobalt font-mono text-[9px] font-bold block mb-1">03 // CARE</span>
-                <span className="text-porcelain font-medium block">Microfiber Lens Cloth</span>
-                <span className="text-[10px] text-silver/60">Zero-chemical polishing</span>
+                <span className="text-olive-ink font-medium block">Microfiber Lens Cloth</span>
+                <span className="text-[10px] text-olive-ink/60">Zero-chemical polishing</span>
               </div>
 
-              <div className="p-3.5 rounded-[8px] bg-white/5 border border-white/10">
+              <div className="p-3.5 rounded-[8px] bg-olive-ink/5 border border-olive-ink/20">
                 <span className="text-cobalt font-mono text-[9px] font-bold block mb-1">04 // GUARANTEE</span>
-                <span className="text-porcelain font-medium block">100% Transit Shield</span>
-                <span className="text-[10px] text-silver/60">Instant photo replacement</span>
+                <span className="text-olive-ink font-medium block">100% Transit Shield</span>
+                <span className="text-[10px] text-olive-ink/60">Instant photo replacement</span>
               </div>
             </div>
           </div>

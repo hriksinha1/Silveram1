@@ -1,21 +1,50 @@
 import type { Config } from "tailwindcss";
 import animate from "tailwindcss-animate";
 
+/**
+ * GRAZA style system.
+ * Legacy token names (midnight / porcelain / silver / cobalt / graphite) are kept
+ * as aliases so existing components inherit the new palette:
+ *   midnight  -> Olive Ink      porcelain -> Linen Cream / Buttery Peach
+ *   silver    -> Olive Ink      cobalt    -> Olive Ink
+ *   graphite  -> Olive Ink
+ */
+const OLIVE = "#3c422e";
+const CREAM = "#fff4ec";
+const PEACH = "#f6e6d9";
+
 const config: Config = {
   content: ["./index.html", "./src/**/*.{ts,tsx}"],
   theme: {
     extend: {
       colors: {
-        midnight: { DEFAULT: "#0C1B36", dark: "#060E1D", light: "#14284D" },
-        porcelain: { DEFAULT: "#F7F5F0", pure: "#FFFFFF", muted: "#EFECE6" },
-        silver: { DEFAULT: "#D9DFE8", light: "#EEF2F6", dark: "#A6B1C2" },
-        cobalt: { DEFAULT: "#6178FF", hover: "#4D64F5" },
-        graphite: { DEFAULT: "#222B3A", muted: "#4A5568" },
+        "olive-ink": { DEFAULT: OLIVE, dark: "#2b3021", light: "#4d5439" },
+        "linen-cream": CREAM,
+        "buttery-peach": PEACH,
+        "squeeze-bottle-green": "#9eef80",
+        "evoo-yellow-green": "#d1e030",
+        "mustard-sun": "#fbd535",
+
+        // Legacy aliases
+        midnight: { DEFAULT: OLIVE, dark: "#2b3021", light: "#4d5439" },
+        porcelain: { DEFAULT: CREAM, pure: CREAM, muted: PEACH },
+        silver: { DEFAULT: OLIVE, light: PEACH, dark: OLIVE },
+        cobalt: { DEFAULT: OLIVE, hover: "#2b3021", light: "#4d5439" },
+        graphite: { DEFAULT: OLIVE, muted: "#5b6148" },
       },
       fontFamily: {
-        serif: ["var(--font-editorial)", "Georgia", "serif"],
-        sans: ["var(--font-sans)", "system-ui", "sans-serif"],
-        mono: ["JetBrains Mono", "ui-monospace", "SFMono-Regular", "Menlo", "monospace"],
+        // Display: ITC Garamond Condensed (substitute)
+        serif: ["var(--font-itc-garamond-condensed)", "Georgia", "serif"],
+        // Body / utility: GT Alpina Typewriter (substitute)
+        sans: ["var(--font-gt-alpina-typewriter)", "Georgia", "serif"],
+        // Badges / micro-labels: Apercu (substitute)
+        mono: ["var(--font-apercu)", "system-ui", "sans-serif"],
+      },
+      borderRadius: {
+        images: "20px",
+        buttons: "10px",
+        inputs: "10px",
+        capsule: "32px",
       },
       scale: { 103: "1.03" },
       keyframes: {

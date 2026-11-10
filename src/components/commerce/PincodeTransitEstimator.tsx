@@ -51,7 +51,7 @@ export function PincodeTransitEstimator() {
   return (
     <section id="transit" className="w-full bg-porcelain py-20 px-6 sm:px-10 border-b border-silver/30">
       <div className="max-w-3xl mx-auto text-center space-y-6">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-porcelain-muted border border-silver/40 text-[10px] font-sans font-bold uppercase tracking-[0.2em] text-cobalt">
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-buttery-peach border border-silver/40 text-[10px] font-sans font-bold uppercase tracking-[0.2em] text-cobalt">
           <Truck className="w-3.5 h-3.5" />
           <span>Pan-India Air Velocity</span>
         </div>
@@ -61,7 +61,7 @@ export function PincodeTransitEstimator() {
         </h3>
 
         {/* Minimal Single-Line Form */}
-        <div className="max-w-md mx-auto flex items-center gap-2 p-1.5 rounded-full bg-white border border-silver/60 shadow-sm focus-within:border-midnight transition-colors">
+        <div className="max-w-md mx-auto flex items-center gap-2 p-1.5 rounded-full bg-buttery-peach border border-silver/60 focus-within:border-midnight transition-colors">
           <input
             type="text"
             maxLength={6}
@@ -74,7 +74,7 @@ export function PincodeTransitEstimator() {
           <button
             type="button"
             onClick={handleCheck}
-            className="px-6 py-2.5 rounded-full bg-midnight text-porcelain text-xs font-sans font-semibold tracking-wider uppercase hover:bg-midnight-light transition-all shadow-sm"
+            className="px-6 py-2.5 rounded-buttons bg-evoo-yellow-green text-olive-ink border border-olive-ink text-xs font-sans font-semibold tracking-wider uppercase hover:bg-evoo-yellow-green/70 transition-all"
           >
             Check
           </button>
@@ -85,7 +85,7 @@ export function PincodeTransitEstimator() {
           <div
             className={`max-w-md mx-auto p-4 rounded-[6px] text-left text-xs transition-all border ${
               result.valid
-                ? "bg-white border-cobalt/30 text-midnight"
+                ? "bg-buttery-peach border-cobalt/30 text-midnight"
                 : "bg-red-50 border-red-200 text-red-700"
             }`}
           >

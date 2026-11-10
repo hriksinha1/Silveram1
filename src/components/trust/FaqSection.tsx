@@ -58,7 +58,7 @@ export function FaqSection() {
                   <span className="font-serif text-lg sm:text-xl text-midnight font-normal group-hover:text-cobalt transition-colors">
                     {faq.q}
                   </span>
-                  <div className="w-8 h-8 rounded-full bg-porcelain-muted flex items-center justify-center text-midnight shrink-0 transition-transform duration-300">
+                  <div className="w-8 h-8 rounded-full bg-buttery-peach flex items-center justify-center text-midnight shrink-0 transition-transform duration-300">
                     {isOpen ? <Minus className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
                   </div>
                 </button>

@@ -199,9 +199,9 @@ export function FrameViewer3D({ onInscriptionChange, className = "" }: FrameView
         <button
           type="button"
           onClick={toggleFlip}
-          className="group inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-porcelain transition-all active:scale-95 shadow-sm cursor-pointer"
+          className="group inline-flex items-center gap-2 px-4 py-2 rounded-full bg-olive-ink/10 hover:bg-olive-ink/20 backdrop-blur-md border border-olive-ink/40 text-olive-ink transition-all active:scale-95 cursor-pointer"
         >
-          <Rotate3d className="w-4 h-4 text-silver transition-transform duration-500 group-hover:rotate-180" />
+          <Rotate3d className="w-4 h-4 text-olive-ink transition-transform duration-500 group-hover:rotate-180" />
           <span className="font-medium tracking-wider uppercase text-[11px]">
             {isFlipped ? t.turnFrameFront : t.turnFrameBack}
           </span>
@@ -216,8 +216,8 @@ export function FrameViewer3D({ onInscriptionChange, className = "" }: FrameView
           }}
           className={`inline-flex items-center gap-2 px-3.5 py-2 rounded-full text-[11px] font-sans font-medium tracking-wider uppercase transition-all border cursor-pointer ${
             blueprintMode
-              ? "bg-cobalt text-porcelain border-cobalt shadow-md scale-105"
-              : "bg-white/5 hover:bg-white/15 text-silver/80 border-white/10"
+              ? "bg-cobalt text-olive-ink border-cobalt scale-105"
+              : "bg-olive-ink/5 hover:bg-olive-ink/15 text-olive-ink/80 border-olive-ink/20"
           }`}
         >
           <Compass className="w-3.5 h-3.5" />
@@ -237,7 +237,7 @@ export function FrameViewer3D({ onInscriptionChange, className = "" }: FrameView
       >
         {/* Inner 3D Flipping Card */}
         <div
-          className="relative w-full h-[480px] sm:h-[540px] rounded-[12px] shadow-[0_30px_70px_-15px_rgba(0,0,0,0.85)]"
+          className="relative w-full h-[480px] sm:h-[540px] rounded-[12px]"
           style={{
             transformStyle: "preserve-3d",
             WebkitTransformStyle: "preserve-3d",
@@ -276,12 +276,12 @@ export function FrameViewer3D({ onInscriptionChange, className = "" }: FrameView
             <div className="absolute inset-0 bg-gradient-to-tr from-midnight/80 via-transparent to-white/10 pointer-events-none" />
 
             {/* Architectural Bevel Highlight */}
-            <div className="absolute inset-0 rounded-[12px] border border-white/20 pointer-events-none shadow-[inset_0_1px_3px_rgba(255,255,255,0.4)]" />
+            <div className="absolute inset-0 rounded-[12px] border border-white/20 pointer-events-none" />
 
             {/* Top Active Ribbon Indicator Badge */}
-            <div className="absolute top-4 left-4 z-20 flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-midnight/85 backdrop-blur-md border border-white/20 text-[10px] font-sans text-porcelain shadow-lg">
+            <div className="absolute top-4 left-4 z-20 flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-midnight/85 backdrop-blur-md border border-white/20 text-[10px] font-sans text-porcelain">
               <span 
-                className="w-2.5 h-2.5 rounded-full border border-white/40 shrink-0 shadow-sm"
+                className="w-2.5 h-2.5 rounded-full border border-white/40 shrink-0"
                 style={{ backgroundColor: activeRibbon.hex }}
               />
               <span className="font-medium tracking-wide uppercase">{activeRibbon.name} Ribbon</span>
@@ -325,7 +325,7 @@ export function FrameViewer3D({ onInscriptionChange, className = "" }: FrameView
             )}
 
             {/* Front Floating Pill */}
-            <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between p-3.5 rounded-[8px] bg-midnight/90 backdrop-blur-md border border-white/10 text-porcelain z-10 shadow-lg">
+            <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between p-3.5 rounded-[8px] bg-midnight/90 backdrop-blur-md border border-white/10 text-porcelain z-10">
               <div className="flex items-center gap-2.5">
                 <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
                 <div>
@@ -352,7 +352,7 @@ export function FrameViewer3D({ onInscriptionChange, className = "" }: FrameView
           {/* BACK FACE: Architectural Inscribed Plaque & Easel Stand  */}
           {/* ======================================================== */}
           <div
-            className="absolute inset-0 w-full h-full rounded-[12px] overflow-hidden bg-[#0a0e17] border border-white/15 p-6 sm:p-8 flex flex-col justify-between"
+            className="absolute inset-0 w-full h-full rounded-[12px] overflow-hidden bg-[#2b3021] border border-white/15 p-6 sm:p-8 flex flex-col justify-between"
             style={{
               backfaceVisibility: "hidden",
               WebkitBackfaceVisibility: "hidden",
@@ -365,23 +365,23 @@ export function FrameViewer3D({ onInscriptionChange, className = "" }: FrameView
               className="absolute inset-0 opacity-20 pointer-events-none"
               style={{
                 backgroundImage:
-                  "radial-gradient(#ffffff 0.75px, transparent 0.75px), radial-gradient(#ffffff 0.75px, #0a0e17 0.75px)",
+                  "radial-gradient(#ffffff 0.75px, transparent 0.75px), radial-gradient(#ffffff 0.75px, #2b3021 0.75px)",
                 backgroundSize: "30px 30px",
                 backgroundPosition: "0 0, 15px 15px",
               }}
             />
 
             {/* 4 Precision Corner Fasteners */}
-            <div className="absolute top-3 left-3 w-3 h-3 rounded-full bg-neutral-600 border border-neutral-400/50 flex items-center justify-center shadow-inner">
+            <div className="absolute top-3 left-3 w-3 h-3 rounded-full bg-neutral-600 border border-neutral-400/50 flex items-center justify-center">
               <div className="w-1.5 h-[1px] bg-neutral-900 rotate-45" />
             </div>
-            <div className="absolute top-3 right-3 w-3 h-3 rounded-full bg-neutral-600 border border-neutral-400/50 flex items-center justify-center shadow-inner">
+            <div className="absolute top-3 right-3 w-3 h-3 rounded-full bg-neutral-600 border border-neutral-400/50 flex items-center justify-center">
               <div className="w-1.5 h-[1px] bg-neutral-900 -rotate-45" />
             </div>
-            <div className="absolute bottom-3 left-3 w-3 h-3 rounded-full bg-neutral-600 border border-neutral-400/50 flex items-center justify-center shadow-inner">
+            <div className="absolute bottom-3 left-3 w-3 h-3 rounded-full bg-neutral-600 border border-neutral-400/50 flex items-center justify-center">
               <div className="w-1.5 h-[1px] bg-neutral-900 -rotate-45" />
             </div>
-            <div className="absolute bottom-3 right-3 w-3 h-3 rounded-full bg-neutral-600 border border-neutral-400/50 flex items-center justify-center shadow-inner">
+            <div className="absolute bottom-3 right-3 w-3 h-3 rounded-full bg-neutral-600 border border-neutral-400/50 flex items-center justify-center">
               <div className="w-1.5 h-[1px] bg-neutral-900 rotate-45" />
             </div>
 
@@ -412,7 +412,7 @@ export function FrameViewer3D({ onInscriptionChange, className = "" }: FrameView
 
             {/* Centerpiece: The Machined Brushed Silver Keepsake Plaque */}
             <div
-              className="relative z-10 my-auto p-6 sm:p-7 rounded-[8px] overflow-hidden shadow-[inset_0_1px_3px_rgba(255,255,255,0.9),0_12px_30px_rgba(0,0,0,0.6)] border border-slate-300"
+              className="relative z-10 my-auto p-6 sm:p-7 rounded-[8px] overflow-hidden border border-slate-300"
               style={{
                 background:
                   "linear-gradient(135deg, #f8fafc 0%, #e2e8f0 40%, #cbd5e1 70%, #f1f5f9 100%)",
@@ -515,7 +515,7 @@ export function FrameViewer3D({ onInscriptionChange, className = "" }: FrameView
               }}
               className={`relative w-12 h-12 rounded-[6px] overflow-hidden border transition-all duration-300 shrink-0 cursor-pointer ${
                 activeImageIndex === idx
-                  ? "border-porcelain scale-105 shadow-md ring-1 ring-porcelain"
+                  ? "border-porcelain scale-105 ring-1 ring-porcelain"
                   : "border-white/20 opacity-60 hover:opacity-100"
               }`}
             >
@@ -531,20 +531,20 @@ export function FrameViewer3D({ onInscriptionChange, className = "" }: FrameView
       {/* ======================================================== */}
       {/* THE EMOTIONAL INSCRIPTION STUDIO                         */}
       {/* ======================================================== */}
-      <div className="w-full max-w-xl mt-6 p-6 sm:p-7 rounded-[12px] bg-white/5 border border-white/10 backdrop-blur-md">
+      <div className="w-full max-w-xl mt-6 p-6 sm:p-7 rounded-[12px] bg-olive-ink/5 border border-olive-ink/20 backdrop-blur-md">
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center gap-2">
-            <Feather className="w-4 h-4 text-silver" />
-            <h3 className="font-serif text-lg text-porcelain font-normal">
+            <Feather className="w-4 h-4 text-olive-ink" />
+            <h3 className="font-serif text-lg text-olive-ink font-normal">
               {t.inscriptionStudioTitle}
             </h3>
           </div>
-          <span className="text-[10px] font-sans font-bold tracking-widest uppercase text-silver/80 px-2.5 py-1 rounded-full bg-white/5 border border-white/10">
+          <span className="text-[10px] font-sans font-bold tracking-widest uppercase text-olive-ink/80 px-2.5 py-1 rounded-full bg-olive-ink/5 border border-olive-ink/20">
             {locale === "hi" ? "फ्रेम के पीछे उकेरा गया" : "Crafted Behind The Frame"}
           </span>
         </div>
 
-        <p className="text-xs font-sans text-silver/70 mb-5 leading-relaxed font-light">
+        <p className="text-xs font-sans text-olive-ink/70 mb-5 leading-relaxed font-light">
           {t.inscriptionStudioDesc}
         </p>
 
@@ -557,8 +557,8 @@ export function FrameViewer3D({ onInscriptionChange, className = "" }: FrameView
               onClick={() => handleSelectPreset(preset)}
               className={`p-2.5 rounded-[8px] text-left transition-all duration-300 border cursor-pointer ${
                 !isCustomMode && selectedThemeId === preset.id
-                  ? "bg-porcelain text-midnight border-porcelain shadow-md scale-[1.02]"
-                  : "bg-white/5 text-silver hover:bg-white/10 border-white/10"
+                  ? "bg-porcelain text-midnight border-porcelain scale-[1.02]"
+                  : "bg-olive-ink/5 text-olive-ink hover:bg-olive-ink/10 border-olive-ink/20"
               }`}
             >
               <span className="text-[9px] font-sans uppercase tracking-widest font-bold block opacity-75 truncate">
@@ -572,7 +572,7 @@ export function FrameViewer3D({ onInscriptionChange, className = "" }: FrameView
         </div>
 
         {/* Custom Input Toggle */}
-        <div className="pt-2 border-t border-white/10">
+        <div className="pt-2 border-t border-olive-ink/20">
           <div className="flex items-center justify-between mb-3">
             <button
               type="button"
@@ -582,14 +582,14 @@ export function FrameViewer3D({ onInscriptionChange, className = "" }: FrameView
                 if (!isFlipped) flipTo(true);
               }}
               className={`text-xs font-sans font-medium flex items-center gap-1.5 transition-colors cursor-pointer ${
-                isCustomMode ? "text-porcelain underline" : "text-silver/70 hover:text-porcelain"
+                isCustomMode ? "text-olive-ink underline" : "text-olive-ink/70 hover:text-olive-ink"
               }`}
             >
               <span>{locale === "hi" ? "✍️ अपना व्यक्तिगत संदेश लिखें" : "✍️ Compose Custom Words"}</span>
             </button>
 
             {isCustomMode && (
-              <span className="text-[10px] font-mono text-silver/60">
+              <span className="text-[10px] font-mono text-olive-ink/60">
                 {message.length}/140 chars
               </span>
             )}
@@ -600,7 +600,7 @@ export function FrameViewer3D({ onInscriptionChange, className = "" }: FrameView
             <div className="space-y-3">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div>
-                  <label className="text-[10px] font-sans uppercase tracking-wider text-silver/70 block mb-1">
+                  <label className="text-[10px] font-sans uppercase tracking-wider text-olive-ink/70 block mb-1">
                     {t.recipientLabel}
                   </label>
                   <input
@@ -609,11 +609,11 @@ export function FrameViewer3D({ onInscriptionChange, className = "" }: FrameView
                     onChange={(e) => setRecipient(e.target.value)}
                     placeholder={locale === "hi" ? "उदा. पूज्य माताजी एवं पिताजी" : "e.g. For Aarav & Diya"}
                     maxLength={32}
-                    className="w-full px-3.5 py-2 rounded-[6px] bg-white/10 border border-white/20 text-porcelain text-xs font-sans focus:outline-none focus:border-silver placeholder:text-silver/40"
+                    className="w-full px-3.5 py-2 rounded-[6px] bg-olive-ink/10 border border-olive-ink/40 text-olive-ink text-xs font-sans focus:outline-none focus:border-silver placeholder:text-olive-ink/60"
                   />
                 </div>
                 <div>
-                  <label className="text-[10px] font-sans uppercase tracking-wider text-silver/70 block mb-1">
+                  <label className="text-[10px] font-sans uppercase tracking-wider text-olive-ink/70 block mb-1">
                     {t.dateLabel}
                   </label>
                   <input
@@ -622,13 +622,13 @@ export function FrameViewer3D({ onInscriptionChange, className = "" }: FrameView
                     onChange={(e) => setDate(e.target.value)}
                     placeholder={locale === "hi" ? "उदा. दीपावली 2026" : "e.g. Diwali 2026"}
                     maxLength={28}
-                    className="w-full px-3.5 py-2 rounded-[6px] bg-white/10 border border-white/20 text-porcelain text-xs font-sans focus:outline-none focus:border-silver placeholder:text-silver/40"
+                    className="w-full px-3.5 py-2 rounded-[6px] bg-olive-ink/10 border border-olive-ink/40 text-olive-ink text-xs font-sans focus:outline-none focus:border-silver placeholder:text-olive-ink/60"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="text-[10px] font-sans uppercase tracking-wider text-silver/70 block mb-1">
+                <label className="text-[10px] font-sans uppercase tracking-wider text-olive-ink/70 block mb-1">
                   {t.messageLabel} (Max 140 Chars)
                 </label>
                 <textarea
@@ -637,7 +637,7 @@ export function FrameViewer3D({ onInscriptionChange, className = "" }: FrameView
                   maxLength={140}
                   rows={3}
                   placeholder={locale === "hi" ? "अपना पावन संदेश अथवा आशीर्वाद यहाँ लिखें..." : "Type your heartfelt blessing here..."}
-                  className="w-full px-3.5 py-2.5 rounded-[6px] bg-white/10 border border-white/20 text-porcelain text-xs font-serif italic focus:outline-none focus:border-silver placeholder:text-silver/40 resize-none leading-relaxed"
+                  className="w-full px-3.5 py-2.5 rounded-[6px] bg-olive-ink/10 border border-olive-ink/40 text-olive-ink text-xs font-serif italic focus:outline-none focus:border-silver placeholder:text-olive-ink/60 resize-none leading-relaxed"
                 />
               </div>
             </div>
@@ -645,7 +645,7 @@ export function FrameViewer3D({ onInscriptionChange, className = "" }: FrameView
 
           {/* Action to View on Plaque */}
           <div className="mt-4 flex items-center justify-between">
-            <span className="text-[11px] font-sans text-silver/60">
+            <span className="text-[11px] font-sans text-olive-ink/60">
               {isFlipped
                 ? (locale === "hi" ? "✦ पट्टिका पर लाइव पूर्वावलोकन सक्रिय है" : "✦ Live preview visible on plaque above")
                 : (locale === "hi" ? "✦ पट्टिका देखने के लिए फ्रेम घुमाएँ" : "✦ Turn frame to preview on plaque")}
@@ -654,7 +654,7 @@ export function FrameViewer3D({ onInscriptionChange, className = "" }: FrameView
             <button
               type="button"
               onClick={toggleFlip}
-              className="text-xs font-sans font-semibold tracking-wider uppercase text-porcelain hover:underline flex items-center gap-1.5 cursor-pointer"
+              className="text-xs font-sans font-semibold tracking-wider uppercase text-olive-ink hover:underline flex items-center gap-1.5 cursor-pointer"
             >
               <span>{isFlipped ? (locale === "hi" ? "मुख्य भाग देखें" : "View Front Side") : (locale === "hi" ? "पट्टिका देखें" : "Turn to Plaque")}</span>
               <span>→</span>

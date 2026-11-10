@@ -107,7 +107,7 @@ export function CheckoutModal() {
 
       <div className="min-h-screen px-4 text-center flex items-center justify-center p-4">
         <div 
-          className="relative inline-block w-full max-w-lg p-6 sm:p-8 overflow-hidden text-left align-middle bg-porcelain rounded-[12px] shadow-2xl border border-silver/40 transition-all z-10"
+          className="relative inline-block w-full max-w-lg p-6 sm:p-8 overflow-hidden text-left align-middle bg-porcelain rounded-[12px] border border-silver/40 transition-all z-10"
           onClick={(e) => e.stopPropagation()}
         >
           {/* Header */}
@@ -153,7 +153,7 @@ export function CheckoutModal() {
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     placeholder="Recipient / Customer name"
-                    className="w-full px-3.5 py-2.5 rounded-[6px] bg-white border border-silver/60 text-midnight text-xs font-sans focus:outline-none focus:border-midnight"
+                    className="w-full px-3.5 py-2.5 rounded-[6px] bg-buttery-peach border border-silver/60 text-midnight text-xs font-sans focus:outline-none focus:border-midnight"
                   />
                 </div>
                 <div>
@@ -167,7 +167,7 @@ export function CheckoutModal() {
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
                     placeholder="10-digit mobile for tracking"
-                    className="w-full px-3.5 py-2.5 rounded-[6px] bg-white border border-silver/60 text-midnight text-xs font-sans focus:outline-none focus:border-midnight"
+                    className="w-full px-3.5 py-2.5 rounded-[6px] bg-buttery-peach border border-silver/60 text-midnight text-xs font-sans focus:outline-none focus:border-midnight"
                   />
                 </div>
               </div>
@@ -182,7 +182,7 @@ export function CheckoutModal() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="name@example.com"
-                  className="w-full px-3.5 py-2.5 rounded-[6px] bg-white border border-silver/60 text-midnight text-xs font-sans focus:outline-none focus:border-midnight"
+                  className="w-full px-3.5 py-2.5 rounded-[6px] bg-buttery-peach border border-silver/60 text-midnight text-xs font-sans focus:outline-none focus:border-midnight"
                 />
               </div>
 
@@ -196,7 +196,7 @@ export function CheckoutModal() {
                   value={address}
                   onChange={(e) => setAddress(e.target.value)}
                   placeholder="House/Apartment, Street, Landmark, City, State"
-                  className="w-full px-3.5 py-2.5 rounded-[6px] bg-white border border-silver/60 text-midnight text-xs font-sans focus:outline-none focus:border-midnight resize-none"
+                  className="w-full px-3.5 py-2.5 rounded-[6px] bg-buttery-peach border border-silver/60 text-midnight text-xs font-sans focus:outline-none focus:border-midnight resize-none"
                 />
               </div>
 
@@ -211,7 +211,7 @@ export function CheckoutModal() {
                   value={pincode}
                   onChange={(e) => setPincode(e.target.value)}
                   placeholder="e.g. 110001, 400001, 560001"
-                  className="w-full px-3.5 py-2.5 rounded-[6px] bg-white border border-silver/60 text-midnight text-xs font-mono focus:outline-none focus:border-midnight"
+                  className="w-full px-3.5 py-2.5 rounded-[6px] bg-buttery-peach border border-silver/60 text-midnight text-xs font-mono focus:outline-none focus:border-midnight"
                 />
               </div>
 
@@ -222,7 +222,7 @@ export function CheckoutModal() {
               )}
 
               {/* Direct Gift Checkbox */}
-              <div className="p-3 rounded-[8px] bg-white border border-silver/40 space-y-2">
+              <div className="p-3 rounded-[8px] bg-buttery-peach border border-silver/40 space-y-2">
                 <label className="flex items-center gap-2 cursor-pointer text-xs font-sans text-midnight font-medium">
                   <input
                     type="checkbox"
@@ -246,7 +246,7 @@ export function CheckoutModal() {
               </div>
 
               {/* Inclusions summary pill */}
-              <div className="p-3 rounded-[8px] bg-porcelain-muted border border-silver/40 flex items-center justify-between text-xs font-sans text-graphite-muted">
+              <div className="p-3 rounded-[8px] bg-buttery-peach border border-silver/40 flex items-center justify-between text-xs font-sans text-graphite-muted">
                 <span className="flex items-center gap-1.5">
                   <Gift className="w-3.5 h-3.5 text-cobalt" />
                   <span>Ribbon: <strong>{activeRibbon.name}</strong> • Plaque: <strong>Engraved</strong></span>
@@ -256,7 +256,7 @@ export function CheckoutModal() {
 
               <button
                 type="submit"
-                className="w-full py-4 rounded-full bg-midnight text-porcelain text-xs font-sans font-semibold tracking-widest uppercase hover:bg-midnight-light transition-all flex items-center justify-center gap-2 shadow-lg cursor-pointer"
+                className="w-full py-4 rounded-buttons bg-evoo-yellow-green text-olive-ink border border-olive-ink text-xs font-sans font-semibold tracking-widest uppercase hover:bg-evoo-yellow-green/70 transition-all flex items-center justify-center gap-2 cursor-pointer"
               >
                 <span>Continue to Secure Payment</span>
                 <ArrowRight className="w-4 h-4" />
@@ -288,8 +288,8 @@ export function CheckoutModal() {
                   onClick={() => setPaymentMethod("upi")}
                   className={`w-full p-4 rounded-[8px] border text-left flex items-center justify-between transition-all cursor-pointer ${
                     paymentMethod === "upi"
-                      ? "border-midnight bg-white shadow-md ring-1 ring-midnight"
-                      : "border-silver/50 bg-white/70 hover:bg-white"
+                      ? "border-midnight bg-buttery-peach ring-1 ring-midnight"
+                      : "border-silver/50 bg-white/70 hover:bg-buttery-peach"
                   }`}
                 >
                   <div className="flex items-center gap-3">
@@ -314,8 +314,8 @@ export function CheckoutModal() {
                   onClick={() => setPaymentMethod("card")}
                   className={`w-full p-4 rounded-[8px] border text-left flex items-center justify-between transition-all cursor-pointer ${
                     paymentMethod === "card"
-                      ? "border-midnight bg-white shadow-md ring-1 ring-midnight"
-                      : "border-silver/50 bg-white/70 hover:bg-white"
+                      ? "border-midnight bg-buttery-peach ring-1 ring-midnight"
+                      : "border-silver/50 bg-white/70 hover:bg-buttery-peach"
                   }`}
                 >
                   <div className="flex items-center gap-3">
@@ -337,8 +337,8 @@ export function CheckoutModal() {
                   onClick={() => setPaymentMethod("cod")}
                   className={`w-full p-4 rounded-[8px] border text-left flex items-center justify-between transition-all cursor-pointer ${
                     paymentMethod === "cod"
-                      ? "border-midnight bg-white shadow-md ring-1 ring-midnight"
-                      : "border-silver/50 bg-white/70 hover:bg-white"
+                      ? "border-midnight bg-buttery-peach ring-1 ring-midnight"
+                      : "border-silver/50 bg-white/70 hover:bg-buttery-peach"
                   }`}
                 >
                   <div className="flex items-center gap-3">
@@ -357,7 +357,7 @@ export function CheckoutModal() {
 
               {/* UPI Simulator Box */}
               {paymentMethod === "upi" && (
-                <div className="p-4 rounded-[8px] bg-white border border-silver/40 text-center space-y-3">
+                <div className="p-4 rounded-[8px] bg-buttery-peach border border-silver/40 text-center space-y-3">
                   <div className="w-32 h-32 mx-auto rounded-[6px] bg-midnight-dark text-porcelain p-3 flex flex-col items-center justify-center border border-silver/40">
                     <QrCode className="w-20 h-20 text-silver" />
                     <span className="text-[8px] font-mono text-silver/80 mt-1">SILVERAM MERCHANT</span>
@@ -375,7 +375,7 @@ export function CheckoutModal() {
               )}
 
               {/* Order Breakdown */}
-              <div className="p-3.5 rounded-[8px] bg-white border border-silver/40 flex items-center justify-between text-xs font-sans">
+              <div className="p-3.5 rounded-[8px] bg-buttery-peach border border-silver/40 flex items-center justify-between text-xs font-sans">
                 <span className="text-graphite-muted">Total Payable:</span>
                 <span className="font-serif text-xl font-bold text-midnight">₹1,200.00</span>
               </div>
@@ -384,7 +384,7 @@ export function CheckoutModal() {
                 type="button"
                 onClick={handlePaymentComplete}
                 disabled={placing}
-                className="w-full py-4 disabled:opacity-60 disabled:cursor-not-allowed rounded-full bg-midnight text-porcelain text-xs font-sans font-semibold tracking-widest uppercase hover:bg-midnight-light transition-all flex items-center justify-center gap-2 shadow-xl cursor-pointer"
+                className="w-full py-4 disabled:opacity-60 disabled:cursor-not-allowed rounded-buttons bg-evoo-yellow-green text-olive-ink border border-olive-ink text-xs font-sans font-semibold tracking-widest uppercase hover:bg-evoo-yellow-green/70 transition-all flex items-center justify-center gap-2 cursor-pointer"
               >
                 <Lock className="w-3.5 h-3.5 text-silver" />
                 <span>{placing ? "Placing order…" : "Confirm Order — ₹1,200.00"}</span>
@@ -411,7 +411,7 @@ export function CheckoutModal() {
                 </p>
               </div>
 
-              <div className="p-4 rounded-[8px] bg-white border border-silver/40 text-left text-xs font-sans space-y-2">
+              <div className="p-4 rounded-[8px] bg-buttery-peach border border-silver/40 text-left text-xs font-sans space-y-2">
                 <div className="flex items-center justify-between border-b border-silver/20 pb-2">
                   <span className="text-graphite-muted">Recipient / Dedication:</span>
                   <span className="font-medium text-midnight">{inscription.recipient}</span>
@@ -435,7 +435,7 @@ export function CheckoutModal() {
               <button
                 type="button"
                 onClick={resetAndClose}
-                className="w-full py-3.5 rounded-full bg-midnight text-porcelain text-xs font-sans font-semibold tracking-widest uppercase hover:bg-midnight-light transition-all shadow-md cursor-pointer"
+                className="w-full py-3.5 rounded-buttons bg-evoo-yellow-green text-olive-ink border border-olive-ink text-xs font-sans font-semibold tracking-widest uppercase hover:bg-evoo-yellow-green/70 transition-all cursor-pointer"
               >
                 Return to Storefront
               </button>

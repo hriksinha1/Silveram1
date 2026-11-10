@@ -151,17 +151,16 @@ export function LetterRitual() {
   return (
     <section
       id="letter"
-      className="w-full bg-[#0C1B36] text-porcelain py-24 sm:py-32 px-6 sm:px-10 border-b border-silver/15 relative overflow-hidden select-none"
+      className="w-full bg-squeeze-bottle-green text-olive-ink py-24 sm:py-32 px-6 sm:px-10 border-b border-silver/15 relative overflow-hidden select-none"
       aria-label={locale === "hi" ? "एक ख़त आपके नाम" : "A letter for someone you love"}
     >
       {/* Background Subtle Radial Glow & Hairline Grid */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[720px] h-[720px] bg-cobalt/12 rounded-full blur-[140px] pointer-events-none" />
       <div
         className="absolute inset-0 pointer-events-none opacity-20"
         style={{
           backgroundImage: `
-            linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-            linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px)
+            linear-gradient(to right, rgba(60, 66, 46, 0.07) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(60, 66, 46, 0.07) 1px, transparent 1px)
           `,
           backgroundSize: "64px 64px",
         }}
@@ -170,20 +169,20 @@ export function LetterRitual() {
       <div className="max-w-4xl mx-auto relative z-10 flex flex-col items-center text-center">
         {/* Section Pre-title Header */}
         <div className="mb-10 sm:mb-14">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/5 border border-white/10 text-[10px] font-mono tracking-[0.25em] text-silver/80 uppercase mb-3">
-            <Sparkles className="w-3 h-3 text-silver" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-olive-ink/5 border border-olive-ink/20 text-[10px] font-mono tracking-[0.25em] text-olive-ink/80 uppercase mb-3">
+            <Sparkles className="w-3 h-3 text-olive-ink" />
             <span>
               {locale === "hi"
                 ? "पावन उपहार गाथा // ख़त अपनों के नाम"
                 : "SIGNATURE GIFTING RITUAL // A LETTER FOR YOU"}
             </span>
           </div>
-          <h2 className="font-serif text-3xl sm:text-4xl text-porcelain font-normal">
+          <h2 className="font-serif text-3xl sm:text-4xl text-olive-ink font-normal">
             {locale === "hi"
               ? "एक ख़त उनके नाम, जिन्हें आप सबसे अधिक चाहते हैं"
               : "A letter for someone you love"}
           </h2>
-          <p className="text-xs sm:text-sm font-sans text-silver/70 max-w-md mx-auto mt-2 font-light">
+          <p className="text-xs sm:text-sm font-sans text-olive-ink/70 max-w-md mx-auto mt-2 font-light">
             {locale === "hi"
               ? "तोहफ़ा केवल एक वस्तु नहीं, एक एहसास है। इसे आहिस्ता से खोलें।"
               : "Gifting begins before the box arrives. Press gently to reveal the story."}
@@ -197,7 +196,7 @@ export function LetterRitual() {
           {/* 1. THE LETTER CONTAINER (Slides up when open) */}
           <div
             ref={letterRef}
-            className={`w-full max-w-md bg-[#FDFCF7] text-midnight rounded-[12px] p-7 sm:p-9 border border-[#D9DFE8] shadow-[0_30px_70px_rgba(0,0,0,0.45)] transition-all duration-700 ease-out z-20 text-left relative ${
+            className={`w-full max-w-md bg-[#fff4ec] text-midnight rounded-[12px] p-7 sm:p-9 border border-[#3c422e] transition-all duration-700 ease-out z-20 text-left relative ${
               isOpen
                 ? "-translate-y-20 sm:-translate-y-28 opacity-100 scale-100 pointer-events-auto"
                 : "translate-y-12 opacity-0 scale-95 pointer-events-none"
@@ -207,14 +206,14 @@ export function LetterRitual() {
             }}
           >
             {/* Fine Archival Letter Inner Hairline Border */}
-            <div className="border border-[#0C1B36]/10 p-5 sm:p-6 rounded-[8px] flex flex-col justify-between min-h-[300px] relative">
+            <div className="border border-[#3c422e]/10 p-5 sm:p-6 rounded-[8px] flex flex-col justify-between min-h-[300px] relative">
               {/* Letter Top Bar: Monogram & Progress */}
-              <div className="flex items-center justify-between border-b border-[#0C1B36]/10 pb-3 text-[10px] font-mono tracking-widest text-graphite-muted uppercase">
-                <span className="font-medium text-[#0C1B36]/80 flex items-center gap-1.5">
+              <div className="flex items-center justify-between border-b border-[#3c422e]/10 pb-3 text-[10px] font-mono tracking-widest text-graphite-muted uppercase">
+                <span className="font-medium text-[#3c422e]/80 flex items-center gap-1.5">
                   <span className="w-1.5 h-1.5 rounded-full bg-cobalt" />
                   {locale === "hi" ? "सिल्वरम · एक ख़त आपके लिए" : "SILVERAM · A LETTER FOR YOU"}
                 </span>
-                <span className="bg-[#0C1B36]/5 px-2 py-0.5 rounded text-[#0C1B36] font-semibold">
+                <span className="bg-[#3c422e]/5 px-2 py-0.5 rounded text-[#3c422e] font-semibold">
                   {pageNumberString}
                 </span>
               </div>
@@ -238,14 +237,14 @@ export function LetterRitual() {
                 </p>
 
                 {current.closingLine && (
-                  <p className="font-serif italic text-xs sm:text-[13px] text-midnight/90 pt-3 border-t border-[#0C1B36]/10 font-normal">
+                  <p className="font-serif italic text-xs sm:text-[13px] text-midnight/90 pt-3 border-t border-[#3c422e]/10 font-normal">
                     &ldquo;{current.closingLine}&rdquo;
                   </p>
                 )}
               </div>
 
               {/* Letter Controls Row */}
-              <div className="pt-3 border-t border-[#0C1B36]/10 flex items-center justify-between text-xs font-sans">
+              <div className="pt-3 border-t border-[#3c422e]/10 flex items-center justify-between text-xs font-sans">
                 {/* Previous Page Button (visible from page 2 onward) */}
                 <div>
                   {currentPage > 0 && currentPage < totalPages - 1 && (
@@ -278,7 +277,7 @@ export function LetterRitual() {
                     <button
                       type="button"
                       onClick={handleNextPage}
-                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#0C1B36] text-[#F7F5F0] text-xs font-sans font-medium tracking-wider uppercase hover:bg-midnight-light transition-all shadow-sm active:scale-95 cursor-pointer"
+                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-buttons bg-evoo-yellow-green text-olive-ink border border-olive-ink text-xs font-sans font-medium tracking-wider uppercase hover:bg-evoo-yellow-green/70 transition-all active:scale-95 cursor-pointer"
                     >
                       <span>{current.buttonText}</span>
                     </button>
@@ -286,7 +285,7 @@ export function LetterRitual() {
                     <button
                       type="button"
                       onClick={handleCtaClick}
-                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-cobalt hover:bg-cobalt-light text-white text-xs font-sans font-semibold tracking-wider uppercase transition-all shadow-md active:scale-95 cursor-pointer"
+                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-cobalt hover:bg-cobalt-light text-white text-xs font-sans font-semibold tracking-wider uppercase transition-all active:scale-95 cursor-pointer"
                     >
                       <span>
                         {locale === "hi" ? "उनके लिए कुछ ख़ास चुनें ↗" : "Find their keepsake ↗"}
@@ -302,9 +301,9 @@ export function LetterRitual() {
           <div className="absolute bottom-0 w-full max-w-md h-52 sm:h-56 z-10 flex flex-col justify-end">
             {/* The Envelope Pocket Body */}
             <div
-              className="relative w-full h-44 sm:h-48 rounded-[12px] bg-[#F7F5F0] border border-[#D9DFE8] shadow-[0_20px_50px_rgba(0,0,0,0.8)] overflow-hidden flex flex-col items-center justify-center p-6 text-center"
+              className="relative w-full h-44 sm:h-48 rounded-[12px] bg-[#fff4ec] border border-[#3c422e] overflow-hidden flex flex-col items-center justify-center p-6 text-center"
               style={{
-                background: "linear-gradient(180deg, #F9F8F4 0%, #EDE9DE 100%)",
+                background: "linear-gradient(180deg, #fff4ec 0%, #f6e6d9 100%)",
               }}
             >
               {/* Envelope V-Pocket Fold Lines */}
@@ -322,18 +321,18 @@ export function LetterRitual() {
               {!isOpen ? (
                 <div className="relative z-10 flex flex-col items-center space-y-3.5 animate-in fade-in duration-500">
                   {/* Geometric Wax Seal Emblem */}
-                  <div className="w-14 h-14 rounded-full bg-[#0C1B36] border-2 border-[#D9DFE8] shadow-lg flex flex-col items-center justify-center text-[#F7F5F0] p-1 select-none">
+                  <div className="w-14 h-14 rounded-full bg-[#3c422e] border-2 border-[#3c422e] flex flex-col items-center justify-center text-[#fff4ec] p-1 select-none">
                     <span className="font-serif text-[11px] font-normal tracking-widest uppercase">
                       SLV
                     </span>
-                    <div className="w-3 h-[1px] bg-[#D9DFE8]/60 my-0.5" />
+                    <div className="w-3 h-[1px] bg-[#3c422e]/60 my-0.5" />
                     <span className="text-[6px] font-mono tracking-wider text-silver/80">
                       RITUAL
                     </span>
                   </div>
 
                   <div>
-                    <span className="text-xs font-serif text-[#0C1B36] font-medium block">
+                    <span className="text-xs font-serif text-[#3c422e] font-medium block">
                       {locale === "hi" ? "सिल्वरम पावन उपहार पत्र" : "The Silveram Gifting Letter"}
                     </span>
                     <span className="text-[10px] font-sans text-graphite-muted block">
@@ -344,7 +343,7 @@ export function LetterRitual() {
                   <button
                     type="button"
                     onClick={handleOpenLetter}
-                    className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#0C1B36] text-[#F7F5F0] text-xs font-sans font-medium tracking-widest uppercase hover:bg-midnight-light transition-all shadow-md active:scale-95 cursor-pointer mt-1"
+                    className="inline-flex items-center gap-2 px-6 py-2.5 rounded-buttons bg-evoo-yellow-green text-olive-ink border border-olive-ink text-xs font-sans font-medium tracking-widest uppercase hover:bg-evoo-yellow-green/70 transition-all active:scale-95 cursor-pointer mt-1"
                   >
                     <Mail className="w-3.5 h-3.5 text-silver" />
                     <span>{locale === "hi" ? "ख़त खोलें" : "Open your letter"}</span>
@@ -352,7 +351,7 @@ export function LetterRitual() {
                 </div>
               ) : (
                 /* Envelope Rim when Open (supporting the letter) */
-                <div className="relative z-10 flex items-center justify-between w-full px-4 text-[9px] font-mono uppercase tracking-widest text-[#0C1B36]/60">
+                <div className="relative z-10 flex items-center justify-between w-full px-4 text-[9px] font-mono uppercase tracking-widest text-[#3c422e]/60">
                   <span>SILVERAM ARCHIVE</span>
                   <span className="font-semibold text-cobalt">SEAL UNBROKEN</span>
                 </div>

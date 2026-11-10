@@ -38,7 +38,7 @@ export function StickyBottomDock({ product, onAddToCart }: StickyBottomDockProps
 
   return (
     <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-40 w-[92%] max-w-xl animate-in fade-in slide-in-from-bottom-6 duration-300">
-      <div className="p-3 pl-4 rounded-full bg-midnight/90 backdrop-blur-xl border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] flex items-center justify-between gap-4 text-porcelain">
+      <div className="p-3 pl-4 rounded-full bg-midnight/90 backdrop-blur-xl border border-white/10 flex items-center justify-between gap-4 text-porcelain">
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 rounded-full overflow-hidden bg-white/10 shrink-0 border border-white/20">
             <img
@@ -64,7 +64,7 @@ export function StickyBottomDock({ product, onAddToCart }: StickyBottomDockProps
             addToBag();
             onAddToCart?.();
           }}
-          className="px-5 py-2.5 rounded-full bg-porcelain text-midnight text-xs font-sans font-semibold tracking-wider uppercase hover:bg-silver transition-all flex items-center gap-2 shrink-0 shadow-sm active:scale-95 cursor-pointer"
+          className="px-5 py-2.5 rounded-full bg-porcelain text-midnight text-xs font-sans font-semibold tracking-wider uppercase hover:bg-silver transition-all flex items-center gap-2 shrink-0 active:scale-95 cursor-pointer"
         >
           <span>{locale === "hi" ? "ऑर्डर करें" : "Order"}</span>
           <ArrowRight className="w-3.5 h-3.5" />

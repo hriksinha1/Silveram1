@@ -112,7 +112,7 @@ export function OccasionsSection({ onSelectOccasion }: OccasionsSectionProps) {
                 addToBag();
                 onSelectOccasion?.(occ.title);
               }}
-              className="group cursor-pointer flex flex-col bg-white rounded-[8px] overflow-hidden border border-silver/40 hover:border-midnight/40 transition-all duration-500 shadow-sm hover:shadow-2xl relative"
+              className="group cursor-pointer flex flex-col bg-buttery-peach rounded-[8px] overflow-hidden border border-silver/40 hover:border-midnight/40 transition-all duration-500 relative"
             >
               {/* Corner Coordinate Crosshairs */}
               <div className="absolute top-2 left-2 z-20 text-[9px] font-mono text-white/90 bg-midnight/70 backdrop-blur-sm px-2 py-0.5 rounded">
@@ -120,7 +120,7 @@ export function OccasionsSection({ onSelectOccasion }: OccasionsSectionProps) {
               </div>
 
               {/* Image with subtle zoom */}
-              <div className="w-full h-72 overflow-hidden bg-porcelain-muted relative">
+              <div className="w-full h-72 overflow-hidden bg-buttery-peach relative">
                 <img
                   src={occ.imageUrl}
                   alt={occ.title}
@@ -128,7 +128,7 @@ export function OccasionsSection({ onSelectOccasion }: OccasionsSectionProps) {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-midnight/60 via-transparent to-transparent pointer-events-none" />
 
-                <div className="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/95 backdrop-blur-sm flex items-center justify-center text-midnight opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-sm">
+                <div className="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/95 backdrop-blur-sm flex items-center justify-center text-midnight opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <ArrowUpRight className="w-4 h-4" />
                 </div>
               </div>
@@ -160,7 +160,7 @@ export function OccasionsSection({ onSelectOccasion }: OccasionsSectionProps) {
         </div>
 
         {/* Minimal Packaging Palette & Ribbon Bar */}
-        <div className="max-w-4xl mx-auto p-6 sm:p-8 rounded-[8px] bg-white border border-silver/40 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6 relative">
+        <div className="max-w-4xl mx-auto p-6 sm:p-8 rounded-[8px] bg-buttery-peach border border-silver/40 flex flex-col md:flex-row items-center justify-between gap-6 relative">
           <div className="text-center md:text-left">
             <div className="flex items-center justify-center md:justify-start gap-2 mb-1">
               <Sparkles className="w-3.5 h-3.5 text-cobalt" />
@@ -187,7 +187,7 @@ export function OccasionsSection({ onSelectOccasion }: OccasionsSectionProps) {
                 }}
                 className={`px-4 py-2.5 rounded-full text-xs font-sans font-medium flex items-center gap-2.5 transition-all duration-300 border cursor-pointer ${
                   activeRibbon.name === ribbon.name
-                    ? "bg-midnight text-porcelain border-midnight shadow-md scale-105"
+                    ? "bg-midnight text-porcelain border-midnight scale-105"
                     : "bg-porcelain text-graphite hover:bg-silver/30 border-silver/40"
                 }`}
               >

@@ -69,7 +69,7 @@ export function Footer() {
           <button
             type="button"
             onClick={handleAudioToggle}
-            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-silver/40 text-[11px] font-sans text-graphite hover:text-midnight hover:border-midnight/40 transition-all cursor-pointer shadow-2xs"
+            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-buttery-peach border border-silver/40 text-[11px] font-sans text-graphite hover:text-midnight hover:border-midnight/40 transition-all cursor-pointer shadow-2xs"
             title={isMuted ? "Unmute subtle audio effects" : "Mute subtle audio effects"}
           >
             {isMuted ? (

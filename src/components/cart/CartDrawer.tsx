@@ -85,11 +85,11 @@ export function CartDrawer() {
       />
 
       <div className="fixed inset-y-0 right-0 max-w-full flex pl-10">
-        <div className="w-screen max-w-md sm:max-w-lg bg-porcelain shadow-2xl flex flex-col animate-in slide-in-from-right duration-300 border-l border-silver/40">
+        <div className="w-screen max-w-md sm:max-w-lg bg-porcelain flex flex-col animate-in slide-in-from-right duration-300 border-l border-silver/40">
           {/* Header */}
-          <div className="p-5 sm:p-6 bg-white border-b border-silver/30 flex items-center justify-between">
+          <div className="p-5 sm:p-6 bg-buttery-peach border-b border-silver/30 flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-full bg-midnight text-porcelain flex items-center justify-center">
+              <div className="w-9 h-9 rounded-buttons bg-evoo-yellow-green text-olive-ink border border-olive-ink flex items-center justify-center">
                 <ShoppingBag className="w-4 h-4 text-silver" />
               </div>
               <div>
@@ -114,7 +114,7 @@ export function CartDrawer() {
           {/* Scrollable Body */}
           <div className="flex-1 overflow-y-auto p-5 sm:p-6 space-y-6">
             {/* 1. Item Visual Preview with Front / Back Toggle */}
-            <div className="p-4 rounded-[10px] bg-white border border-silver/40 shadow-sm space-y-4">
+            <div className="p-4 rounded-[10px] bg-buttery-peach border border-silver/40 space-y-4">
               <div className="flex items-center justify-between text-xs font-sans pb-2 border-b border-silver/20">
                 <span className="font-mono text-[9px] uppercase tracking-widest text-cobalt font-semibold">
                   EDITION 01 • LAKSHMI-GANESHA
@@ -146,7 +146,7 @@ export function CartDrawer() {
                     <div className="absolute inset-0 bg-gradient-to-t from-midnight/80 via-transparent to-transparent" />
                     
                     {/* Active Ribbon Swatch Tag */}
-                    <div className="absolute top-3 left-3 flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-midnight/85 backdrop-blur-md border border-white/20 text-[10px] font-sans text-porcelain shadow-sm">
+                    <div className="absolute top-3 left-3 flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-midnight/85 backdrop-blur-md border border-white/20 text-[10px] font-sans text-porcelain">
                       <span 
                         className="w-2.5 h-2.5 rounded-full border border-white/40 shrink-0" 
                         style={{ backgroundColor: activeRibbon.hex }} 
@@ -156,7 +156,7 @@ export function CartDrawer() {
 
                     {/* Photo upload status badge */}
                     {uploadedPhoto && (
-                      <div className="absolute top-3 right-3 flex items-center gap-1 px-2.5 py-1 rounded-full bg-emerald-950/80 backdrop-blur-md border border-emerald-400/40 text-[10px] font-sans text-emerald-300 shadow-sm">
+                      <div className="absolute top-3 right-3 flex items-center gap-1 px-2.5 py-1 rounded-full bg-emerald-950/80 backdrop-blur-md border border-emerald-400/40 text-[10px] font-sans text-emerald-300">
                         <Check className="w-3 h-3 text-emerald-400" />
                         <span>Photo Uploaded</span>
                       </div>
@@ -172,7 +172,7 @@ export function CartDrawer() {
                   </div>
                 ) : (
                   /* REAR PLAQUE LIVE PREVIEW */
-                  <div className="p-5 bg-[#0a0e17] flex flex-col justify-between min-h-56 relative">
+                  <div className="p-5 bg-[#2b3021] flex flex-col justify-between min-h-56 relative">
                     <div className="flex items-center justify-between border-b border-white/10 pb-2">
                       <span className="text-[8px] font-mono uppercase tracking-widest text-silver/60">
                         SILVERAM ATELIER • BESPOKE PLAQUE
@@ -184,7 +184,7 @@ export function CartDrawer() {
 
                     {/* Plaque Graphic */}
                     <div 
-                      className="my-3 p-3.5 rounded-[6px] border border-slate-300 text-center shadow-md relative"
+                      className="my-3 p-3.5 rounded-[6px] border border-slate-300 text-center relative"
                       style={{
                         background: "linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #f1f5f9 100%)",
                       }}
@@ -212,7 +212,7 @@ export function CartDrawer() {
             </div>
 
             {/* 2. Complimentary Archival Photo Upload Dropzone */}
-            <div className="p-4 rounded-[10px] bg-white border border-silver/40 shadow-sm space-y-3">
+            <div className="p-4 rounded-[10px] bg-buttery-peach border border-silver/40 space-y-3">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
                   <ImageIcon className="w-4 h-4 text-cobalt" />
@@ -240,9 +240,9 @@ export function CartDrawer() {
 
               {uploadedPhoto ? (
                 /* Uploaded File Preview */
-                <div className="p-3 rounded-[8px] bg-porcelain-muted border border-silver/60 flex items-center justify-between gap-3 animate-in fade-in">
+                <div className="p-3 rounded-[8px] bg-buttery-peach border border-silver/60 flex items-center justify-between gap-3 animate-in fade-in">
                   <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 rounded-[4px] overflow-hidden bg-white border border-silver/40 shrink-0">
+                    <div className="w-12 h-12 rounded-[4px] overflow-hidden bg-buttery-peach border border-silver/40 shrink-0">
                       <img 
                         src={uploadedPhoto.previewUrl} 
                         alt="Uploaded preview" 
@@ -303,8 +303,8 @@ export function CartDrawer() {
                       onClick={() => setPhotoOption("installed")}
                       className={`p-2.5 rounded-[6px] text-left border transition-all cursor-pointer ${
                         photoOption === "installed"
-                          ? "bg-midnight text-porcelain border-midnight shadow-sm"
-                          : "bg-white text-graphite border-silver/40 hover:bg-porcelain"
+                          ? "bg-midnight text-porcelain border-midnight"
+                          : "bg-buttery-peach text-graphite border-silver/40 hover:bg-porcelain"
                       }`}
                     >
                       <span className="text-xs font-medium block">Pre-Installed in Frame</span>
@@ -315,8 +315,8 @@ export function CartDrawer() {
                       onClick={() => setPhotoOption("envelope")}
                       className={`p-2.5 rounded-[6px] text-left border transition-all cursor-pointer ${
                         photoOption === "envelope"
-                          ? "bg-midnight text-porcelain border-midnight shadow-sm"
-                          : "bg-white text-graphite border-silver/40 hover:bg-porcelain"
+                          ? "bg-midnight text-porcelain border-midnight"
+                          : "bg-buttery-peach text-graphite border-silver/40 hover:bg-porcelain"
                       }`}
                     >
                       <span className="text-xs font-medium block">In Gold-Foil Envelope</span>
@@ -328,7 +328,7 @@ export function CartDrawer() {
             </div>
 
             {/* 3. Active Ceremonial Ribbon Swatch Selector */}
-            <div className="p-4 rounded-[10px] bg-white border border-silver/40 shadow-sm space-y-3">
+            <div className="p-4 rounded-[10px] bg-buttery-peach border border-silver/40 space-y-3">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
                   <Sparkles className="w-4 h-4 text-cobalt" />
@@ -352,12 +352,12 @@ export function CartDrawer() {
                     }}
                     className={`p-2.5 rounded-[6px] text-left border flex items-center gap-2.5 transition-all cursor-pointer ${
                       activeRibbon.name === ribbon.name
-                        ? "bg-midnight text-porcelain border-midnight shadow-sm scale-[1.02]"
+                        ? "bg-midnight text-porcelain border-midnight scale-[1.02]"
                         : "bg-porcelain text-graphite border-silver/40 hover:bg-silver/30"
                     }`}
                   >
                     <span 
-                      className="w-3.5 h-3.5 rounded-full border border-black/20 shrink-0 shadow-inner" 
+                      className="w-3.5 h-3.5 rounded-full border border-black/20 shrink-0" 
                       style={{ backgroundColor: ribbon.hex }} 
                     />
                     <div className="truncate">
@@ -370,7 +370,7 @@ export function CartDrawer() {
             </div>
 
             {/* 4. Complete Complimentary Packaging Summary */}
-            <div className="p-4 rounded-[10px] bg-porcelain-muted border border-silver/40 space-y-2 text-xs font-sans">
+            <div className="p-4 rounded-[10px] bg-buttery-peach border border-silver/40 space-y-2 text-xs font-sans">
               <span className="text-[10px] font-mono uppercase tracking-widest text-graphite-muted font-bold block mb-2">
                 INCLUDED AT NO ADDITIONAL CHARGE
               </span>
@@ -412,7 +412,7 @@ export function CartDrawer() {
           </div>
 
           {/* Footer Checkout Bar */}
-          <div className="p-5 sm:p-6 bg-white border-t border-silver/30 space-y-3 shadow-lg">
+          <div className="p-5 sm:p-6 bg-buttery-peach border-t border-silver/30 space-y-3">
             <div className="flex items-center justify-between">
               <div>
                 <span className="text-[10px] font-mono uppercase tracking-widest text-graphite-muted block">
@@ -430,7 +430,7 @@ export function CartDrawer() {
             <button
               type="button"
               onClick={openCheckout}
-              className="w-full py-4 rounded-full bg-midnight text-porcelain text-xs font-sans font-semibold tracking-widest uppercase hover:bg-midnight-light transition-all flex items-center justify-center gap-2 shadow-xl active:scale-95 cursor-pointer"
+              className="w-full py-4 rounded-buttons bg-evoo-yellow-green text-olive-ink border border-olive-ink text-xs font-sans font-semibold tracking-widest uppercase hover:bg-evoo-yellow-green/70 transition-all flex items-center justify-center gap-2 active:scale-95 cursor-pointer"
             >
               <Lock className="w-3.5 h-3.5 text-silver" />
               <span>Proceed to Delivery & Checkout</span>
